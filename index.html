@@ -481,7 +481,7 @@ document.addEventListener('DOMContentLoaded',function(){var h=document.querySele
     <div class="cta">
       <div class="when">
         <div class="date">Monday 23 November 2026</div>
-        <p>10:00–16:00 (TBC) · Lunch provided · Liverpool city centre</p>
+        <p>10:00–16:00 (TBC) · Lunch provided · Somewhere in Liverpool city centre where yokai like to hide</p>
       </div>
       <a class="btn" href="#join"><b>Register your interest</b><small>by Friday 30 October 2026</small></a>
     </div>
@@ -786,7 +786,7 @@ function make(){
   if(sp&&sp.img){im.src=sp.img;im.className='';pc.textContent=sp.cap}
   else if(kind==='object'){var pick=STICK[Math.floor(Math.random()*STICK.length)];if(pick===im.dataset.last)pick=STICK[(STICK.indexOf(pick)+1)%STICK.length];im.src='img/'+pick+'.png';im.dataset.last=pick;im.className='';pc.textContent='A guest from the night parade of tsukumogami'}
   else{var c=COUSIN[t.cz||K.cousin];im.src=c.img;im.className='cousin';pc.textContent='Its cousin: '+c.name+' (see the cards above)'}
-  current=$('g-name').textContent+' — '+$('g-desc').textContent+' #ScouseYokai';
+  current=$('g-name').textContent+' — '+$('g-desc').textContent;
   var o=$('g-out');o.classList.remove('pop');void o.offsetWidth;o.classList.add('pop');$('g-msg').textContent='';
 }
 pl.addEventListener('change',make);th.addEventListener('change',make);
@@ -815,7 +815,7 @@ window.addEventListener('pageshow',function(){setTimeout(make,0)});
     <h2 id="join-h">Details &amp; how to join</h2>
     <dl class="details">
       <div><dt>When</dt><dd>Monday 23 November 2026, 10:00–16:00 (TBC)</dd></div>
-      <div><dt>Where</dt><dd>Liverpool city centre (venue shared with selected participants)</dd></div>
+      <div><dt>Where</dt><dd>Liverpool city centre. We’ll reveal the venue to selected participants.</dd></div>
       <div><dt>Who</dt><dd>Artists, art students &amp; graduates aged 18–21</dd></div>
       <div><dt>Cost</dt><dd>Free, lunch provided</dd></div>
       <div><dt>Bring</dt><dd>Your brushes, ink, pens and a Liverpool story</dd></div>
@@ -1088,7 +1088,6 @@ window.addEventListener('pointerup',function(){d=null;e.style.cursor=''});})();
     <div class="cw">Part of <b>Creative Works</b>,<br>supported by Kodansha.</div>
     <div class="cw">Art partner:<br><b>Dorothy</b>, Liverpool</div>
     <div class="cw">Instagram:<br><a href="https://www.instagram.com/inspired_by_kodansha/" target="_blank" rel="noopener"><b>@inspired_by_kodansha</b></a></div>
-    <div class="cw" style="color:var(--ink-soft)">[Contact details]</div>
   </footer>
   <p class="credits">Image credits: <i>Hyakki yagyō zu</i>, University of Tokyo General Library; Utagawa Hiroshige II, <i>The Story of Momotarō: The Foxes’ Wedding</i>, Museum of Fine Arts, Boston; Katsushika Hokusai, <i>Oiwa-san</i> (<i>Hyaku monogatari</i>), Rijksmuseum; <i>Gazu hyakki yagyō</i> and <i>Tsukumogami-e</i>, NDL Image Bank, National Diet Library; Yoshitoshi, <i>Tōkyō kaika kyōga meisho</i>, Tokyo Metropolitan Library; Hokusai and pupils, The Metropolitan Museum of Art; <i>Hyakki yagyō emaki</i> (Shinju-an) and Shunsen’s <i>Ehon hyaku monogatari</i>, via Wikimedia Commons; <i>Bakemono no e</i>, Brigham Young University; Toriyama Sekien, Enshin, karakasa-obake [source]; bake-kitsune [source]; Sawaki Sūshi, nukekubi (rokurokubi) [source]. Historical images cropped or adapted. Yuki-onna: CC BY-SA 4.0, creativecommons.org/licenses/by-sa/4.0/; source: commons.wikimedia.org/wiki/File:30.Yukionna.jpg. Liver Building drawing: after Balázs Gábor / Unsplash. Guest illustration © Miyato Sakurai</p>
 </div>
