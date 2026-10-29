@@ -441,6 +441,20 @@ html.night .emaki-scroll img{filter:brightness(.78) sepia(.12)}
 .yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .yt-cap{font-size:12px;color:var(--ink-soft);margin:6px 0 0}
 .guest-bio{margin-top:14px}.guest-bio p{margin:0 0 10px;max-width:62ch}
+.f13{cursor:pointer;border-bottom:1px dotted currentColor;-webkit-tap-highlight-color:transparent}
+.f13:hover{color:var(--shu)}
+.neko{position:fixed;left:max(14px,4vw);bottom:0;z-index:65;width:clamp(110px,22vw,170px);pointer-events:none;transform:translateY(110%);transition:transform 1.1s cubic-bezier(.3,1.25,.5,1)}
+.neko.on{transform:translateY(8%)}
+.neko.bye{transform:translateY(110%);transition:transform .8s ease-in}
+.neko svg{display:block;width:100%;height:auto;filter:drop-shadow(0 0 10px rgba(0,0,0,.35))}
+.neko .tl{transform-box:view-box;transform-origin:84px 108px}
+@media (prefers-reduced-motion:no-preference){.neko.on .tl{animation:nsw 1.2s ease-in-out infinite alternate}.neko.on .tl2{animation-delay:-.6s}@keyframes nsw{from{transform:rotate(-6deg)}to{transform:rotate(7deg)}}
+ .neko.on .ey{animation:nbl 3s infinite}@keyframes nbl{0%,88%,100%{transform:scaleY(1)}92%{transform:scaleY(.1)}}}
+.neko .ey{transform-box:fill-box;transform-origin:center}
+.neko-say{position:absolute;left:92%;bottom:62%;width:max-content;max-width:52vw;background:#1C1A17;color:#F2EBDC;font:700 13px/1.35 var(--sans,system-ui);padding:8px 12px;border-radius:10px;opacity:0;transition:opacity .5s .9s}
+.neko.on .neko-say{opacity:1}.neko.bye .neko-say{opacity:0;transition-delay:0s}
+html.night .neko-say{background:#F2EBDC;color:#1C1A17}
+html.night .neko svg{filter:drop-shadow(0 0 14px rgba(255,200,90,.35))}
 </style>
 
 <script>
@@ -492,7 +506,7 @@ document.addEventListener('DOMContentLoaded',function(){var h=document.querySele
         <div class="date">Monday 23 November 2026</div>
         <p>11:00–17:00 (TBC) · Somewhere in Liverpool city centre where yokai like to hide</p>
       </div>
-      <a class="btn" href="#join"><b>Register your interest</b><small>by Friday 30 October 2026</small></a>
+      <a class="btn" href="#join"><b>Register your interest</b><small>by Friday <span class="f13" role="button" tabindex="0" aria-label="13">13</span> November 2026</small></a>
     </div>
   </div>
 
@@ -828,14 +842,14 @@ window.addEventListener('pageshow',function(){setTimeout(make,0)});
       <div><dt>Who</dt><dd>Artists, art students &amp; graduates aged 18–21</dd></div>
       <div><dt>Cost</dt><dd>Free</dd></div>
       <div><dt>Bring</dt><dd>Your brushes, ink, pens and a Liverpool story</dd></div>
-      <div><dt>Register</dt><dd>By Friday 30 October 2026</dd></div>
+      <div><dt>Register</dt><dd>By Friday <span class="f13" role="button" tabindex="0" aria-label="13">13</span> November 2026</dd></div>
     </dl>
     <ol class="how">
-      <li>Register your interest by Friday 30 October.</li>
+      <li>Register your interest by Friday 13 November.</li>
       <li>We’ll send you an application form.</li>
       <li>Selected participants will hear back with details for the day.</li>
     </ol>
-    <a class="btn" href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=s1NPu3BrHkuRr35NN3PLPZuIGZiRFX5Ijv6pQidiN3pUMzRBMFFXSzMyNVA2Q1BTVkhZSjhROTlDWi4u&amp;route=shorturl" target="_blank" rel="noopener" style="margin-top:14px"><b>Register your interest</b><small>Opens the form · by Friday 30 October 2026</small></a>
+    <a class="btn" href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=s1NPu3BrHkuRr35NN3PLPZuIGZiRFX5Ijv6pQidiN3pUMzRBMFFXSzMyNVA2Q1BTVkhZSjhROTlDWi4u&amp;route=shorturl" target="_blank" rel="noopener" style="margin-top:14px"><b>Register your interest</b><small>Opens the form · by Friday 13 November 2026</small></a>
   </section>
 
   <section aria-labelledby="guest-h" data-kanji="絵師">
@@ -1102,6 +1116,16 @@ b.addEventListener('click',function(){var f=document.createElement('iframe');
 f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.id+'?autoplay=1&rel=0';f.title='Miyato Sakurai drawing manga';
 f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';f.allowFullscreen=true;
 b.innerHTML='';b.appendChild(f);b.style.cursor='default'},{once:true});})();
+</script>
+<div class="neko" id="neko" aria-hidden="true"><svg viewBox="0 0 130 120"><g class="tl"><path d="M84 108 C104 104 110 84 100 70" fill="none" stroke="#0E0C0A" stroke-width="6" stroke-linecap="round"/></g><g class="tl tl2"><path d="M82 104 C114 98 120 70 108 56" fill="none" stroke="#0E0C0A" stroke-width="6" stroke-linecap="round"/></g><path d="M38 116 C28 114 28 100 32 88 C36 74 40 66 44 58 C40 50 40 40 44 32 L40 14 L53 25 C57 23 63 23 67 25 L80 14 L76 32 C80 40 80 50 76 58 C80 66 86 76 88 90 C90 104 86 116 76 116 Z" fill="#0E0C0A"/><g fill="#F3C33A"><ellipse class="ey" cx="52" cy="42" rx="4.6" ry="3.6"/><ellipse class="ey" cx="68" cy="42" rx="4.6" ry="3.6"/></g><g fill="#0E0C0A"><rect x="51.2" y="38.6" width="1.6" height="6.8" rx=".8"/><rect x="67.2" y="38.6" width="1.6" height="6.8" rx=".8"/></g></svg><p class="neko-say">Friday the 13th? A <i>bakeneko</i>’s favourite day.</p></div>
+<script>
+(function(){
+// Friday the 13th: tap the 13 in the deadline and a two-tailed bakeneko (a shape-shifting cat yokai) comes to look.
+var n=document.getElementById('neko'),t=null;if(!n)return;
+function go(e){e.preventDefault();e.stopPropagation();if(n.classList.contains('on'))return;clearTimeout(t);n.classList.remove('bye');void n.offsetWidth;n.classList.add('on');
+ t=setTimeout(function(){n.classList.add('bye');setTimeout(function(){n.classList.remove('on','bye')},850)},4200)}
+document.querySelectorAll('.f13').forEach(function(x){x.addEventListener('click',go);x.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' ')go(e)})});
+})();
 </script>
 <div class="wrap">
   <footer>
